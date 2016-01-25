@@ -26,7 +26,7 @@ class Book
 end
 
 my_book = Book.new("An awesome book title")
-my_book.title = "My Awesome Book"
+my_book.title
 my_book.add_chapter("My Awesome Chapter 1")
 my_book.add_chapter("My Awesome Chapter 2")
 my_book.chapters
