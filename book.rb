@@ -1,10 +1,12 @@
-# require "helperMethods.rb"
+require "helperMethods.rb"
 
 class Book
-  # ## Use this to allow us to titleize the chapters of the book
-  # include HelperMethods
+
   attr_accessor :title
   attr_accessor :chapters
+  # The difference between include and extend is that when you use include the methods are brought in as instance methods.
+  # When you use extend those methods are brought in as class methods and can be used 
+  include HelperMethods
 
   def initialize(titleStr)
     @title = titleStr
@@ -26,7 +28,7 @@ class Book
 end
 
 my_book = Book.new("An awesome book title")
-my_book.title
+my_book.titleize(title)
 my_book.add_chapter("My Awesome Chapter 1")
 my_book.add_chapter("My Awesome Chapter 2")
 my_book.chapters
